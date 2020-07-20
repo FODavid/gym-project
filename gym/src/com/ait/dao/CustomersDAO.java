@@ -9,9 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ait.gym.*;
-//test
-//test-oladejo
-//keex
+
 
 public class CustomersDAO {
 	
