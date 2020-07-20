@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+
+
+body{
+	width:100%;
+	height:100%;
+	background-color: #d4835b;
+}
+
+#headingMessage{
+	text-align: center;
+	margin-top: 40px;
+}
+#serviceLinks{
+	font-size: 200%;
+	color: black;
+	font-weight: bold;
+	margin-top: 5px;
+}

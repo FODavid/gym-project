@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>Staff</title>
+<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/fdMain.css" />
+<link rel="stylesheet" href="css/jquery.dataTables.css">
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/fdMain.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body id="projectArea">
+	<div id="heading">
+		<h1 style="color: red; text-shadow: -2px 0 grey, 0 2px grey, 2px 0 grey, 0 -2px grey;">Staff Privileges</h1>
+		<img src="pics/pics/20th-century-fox.png">
+	</div>
+	<div class="tabs">
+		<button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen" style = "width: 180px; color: red; background-color: grey;">2018 Movies</button>
+		<button class="tablinks" onclick="openCity(event, 'Products')" id="movieProducts" style = "width: 180px; color: red;background-color: grey;">Panels</button>
+		<button class="tablinks" onclick="openCity(event, 'Admin')" id="admin" style = "width: 180px; color: red;background-color: grey;">Tables</button><br>
+	</div>
+	<div id="Home" class="tabcontent">
+		<img src="pics/pics/logo.jpg" style="height: 600px; width: 1050px; display: block; margin-left: auto; margin-right: auto;">
+	</div>
+
+	<div id="Products" class="tabcontent">
+		<span onclick="this.parentElement.style.display='none'"><button>Back</button></span>
+		<h2 style="color:red; text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;">Panels</h2>
+		<div class="container">
+			<div id="productList">
+				<div class="row">
+					<div class ="col-sm-6 col-md-4 col-lg-3">
+				<div class = "card">
+					<img src="image/aerobics.jpg" height="150">
+					<p>Name: Aerobics</p>
+					<p>Instructor: Larry Forde</p>
+					<p>Price: 20EUR p/person</p>
+				</div>
+			</div>	
+			
+			<div class ="col-sm-6 col-md-4 col-lg-3">
+				<div class = "card">
+					<img src="images/spinning.jpg" height="150">
+					<p>Name: Spinning</p>
+					<p>Instructor: Megan White</p>
+					<p>Price: 15EUR p/person</p>
+				</div>
+			</div>	
+			
+			<div class ="col-sm-6 col-md-4 col-lg-3">
+				<div class = "card">
+					<img src="images/zumba.jpg" height="150">
+					<p>Name: Zumba</p>
+					<p>Instructor: Catherine McDermott</p>
+					<p>Price: 10EUR p/person</p>
+				</div>
+			</div>	
+			
+			<div class ="col-sm-6 col-md-4 col-lg-3">
+				<div class = "card">
+					<img src="image/fitnessOver60.jpg" height="150">
+					<p>Name: Fitness Over 60s</p>
+					<p>Instructor: Geraldine Lucas</p>
+					<p>Price: 5EUR p/person</p>
+				</div>
+			</div>	
+			
+			<div class ="col-sm-6 col-md-4 col-lg-3">
+				<div class = "card">
+					<img src="image/kidsfitness.jpg" height="150">
+					<p>Name: Fitness For Kids</p>
+					<p>Instructor: Ronan O'Neill</p>
+					<p>Price: 5EUR p/person</p>
+				</div>
+			</div>	
+			
+			
+					<div class="row"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="Admin" class="tabcontent">
+		<span onclick="this.parentElement.style.display='none'"><button>Back</button></span>
+		<table id="table_id" class="display">
+			<thead>
+				<tr>
+					<th style="color:black; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">ID</th>
+					<th style="color:black; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Service Name</th>
+					<th style="color:black; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Service Price</th>
+					<th style="color:black; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Service Limit</th>
+					<th style="color:black; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Start Date</th>
+					<th style="color:black; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Edit</th>
+				</tr>
+			</thead>
+			<tbody id="table_body">
+			</tbody>
+		</table>
+		<div id="theOscars" class="modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" id="btnAdd">New Service</button>
+					</div>
+					<div class="modal-body">
+						<form id="movieForm">
+							<div class="mainArea">
+								<label>Id:</label> <input id="serviceId" name="id" type="text" disabled /> 
+								<label>Service name:</label> <input type="text" id="name" name="servieName" /> 
+								<label>Service Price:</label><input type="text" id="servicePrice" name="servicePrice" /> 
+								<label>Service Limit:</label><input type="text" id="serviceLimit" name="serviceLimit" /> 
+								<label>Service Instructor:</label><input type="text" id="serviceInstructorLast" name="serviceInstructorLast" /> 
+								<label>Start Date:</label><input type="text" id="startDate" name="startDate" /> 
+								<label>End Date:</label><input type="text" id="endDate" name="endDate" /> 
+								<label>Category ID:</label><input type="text" id="categoryId" name="categoryId" /> 
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="btnSave" class="btn btn-default"
+							data-dismiss="modal">Save</button>
+						<button type="button" id="btnDelete" class="btn btn-default"
+							data-dismiss="modal">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
